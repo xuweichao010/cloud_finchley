@@ -3,3 +3,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone:
+#配置服务链路追踪
+spring:
+  zipkin:
+    base-url: http://127.0.0.1:9411
+
+

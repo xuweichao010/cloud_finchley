@@ -1,7 +1,14 @@
 spring:
-  cloud:
-    config:
-      profile: dev
-      uri: http://127.0.0.1:10021
-      name: user
-      label: dev
+  application:
+    name: zipkin
+server:
+  port: 9411
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://127.0.0.1:10011
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
