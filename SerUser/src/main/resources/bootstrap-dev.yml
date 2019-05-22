@@ -3,4 +3,4 @@ spring:
     config:
       profile: dev
       uri: http://127.0.0.1:1004
-                      name: user
+      name: user
