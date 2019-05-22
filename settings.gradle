@@ -5,4 +5,5 @@ include 'SerConfig'
 include 'SerGateway'
 include 'SerService'
 include 'SerFeign'
+include 'SerZipKin'
 
