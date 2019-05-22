@@ -1,0 +1,8 @@
+rootProject.name = 'CloudFinchley'
+include 'SerRegister'
+include 'SerUser'
+include 'SerConfig'
+include 'SerGateway'
+include 'SerService'
+include 'SerFeign'
+

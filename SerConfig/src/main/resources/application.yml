@@ -1,0 +1,20 @@
+server:
+  port: 1002
+spring:
+  application:
+    name: config-service
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/share
+eureka:
+  instance:
+    appname: 配置中心
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/

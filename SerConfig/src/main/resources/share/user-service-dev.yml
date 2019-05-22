@@ -1,0 +1,8 @@
+server:
+  port: 1011
+eureka:
+  instance:
+    appname: 用户中心
+spring:
+  application:
+    name: user-service

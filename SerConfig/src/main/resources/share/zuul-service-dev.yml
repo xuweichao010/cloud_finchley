@@ -1,0 +1,13 @@
+server:
+  port: 1030
+eureka:
+  instance:
+    appname: 网关
+spring:
+  application:
+    name: zuul-service
+zuul:
+  routes:
+    api_a:
+      path: /**
+      serviceId: fegin-service

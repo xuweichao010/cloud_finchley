@@ -1,0 +1,13 @@
+server:
+  port: 1012
+
+spring:
+  application:
+    name: user-service
+#配置所有服务的注册点
+eureka:
+  instance:
+      appname: 用户中心
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
