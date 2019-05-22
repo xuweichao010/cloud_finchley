@@ -6,3 +6,4 @@ spring:
       profile: dev
       uri: http://127.0.0.1:10021
       name: user
+      label: dev

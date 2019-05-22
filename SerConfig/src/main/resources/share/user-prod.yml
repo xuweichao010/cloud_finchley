@@ -1,6 +1,10 @@
 server:
-  port: 1010
+  port: 10032
 eureka:
   instance:
     appname: 用户中心
+spring:
+  application:
+    name: user
+
 
