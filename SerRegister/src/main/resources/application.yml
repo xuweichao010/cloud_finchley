@@ -1,6 +1,9 @@
 spring:
   application:
     name: Register
+  #配置服务链路追踪
+  zipkin:
+    base-url: http://127.0.0.1:9411
 server:
   port: 10011
 eureka:
@@ -14,3 +17,4 @@ eureka:
 #      # 如何解决Eureka Server不踢出已关停的节点的问题
 #      enable-self-preservation: false  # 关闭自我保护
 #      eviction-interval-timer-in-ms: 10000    #清理间隔（单位毫秒，默认是60*1000）
+

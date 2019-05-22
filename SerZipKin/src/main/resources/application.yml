@@ -5,8 +5,8 @@ server:
   port: 9411
 eureka:
   client:
-    service-url:
-      defaultZone:  http://127.0.0.1:10011
+    serviceUrl:
+      defaultZone: http://localhost:10011/eureka/
 management:
   metrics:
     web:
