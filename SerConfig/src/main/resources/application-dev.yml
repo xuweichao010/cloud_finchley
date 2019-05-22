@@ -1,0 +1,23 @@
+server:
+  port: 1002
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xuweichao010/cloud_finchley.git
+          username: xuweichao010@163.com
+          password: github1993
+          default-label: dev
+
+
+eureka:
+  instance:
+    appname: 配置中心
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
