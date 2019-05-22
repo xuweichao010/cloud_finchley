@@ -1,15 +1,10 @@
 server:
-  port: 1002
+  port: 10021
 spring:
   application:
     name: config-service
   profiles:
-    active: native
-  cloud:
-    config:
-      server:
-        native:
-          search-locations: classpath:/share
+    active: dev
 eureka:
   instance:
     appname: 配置中心
@@ -17,4 +12,4 @@ eureka:
     ip-address: 127.0.0.1
   client:
     serviceUrl:
-      defaultZone: http://localhost:1001/eureka/
+      defaultZone: http://localhost:10011/eureka/

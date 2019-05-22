@@ -1,0 +1,7 @@
+### 无法连接git仓库时可以用本地配置
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/share

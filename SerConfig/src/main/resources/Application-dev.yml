@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xuweichao010/cloud_finchley.git
+          username: xuweichao010@163.com
+          password: github1993
+          default-label: dev
+          search-paths: SerConfig/src/main/resources/share
+          skipSslValidation: true
