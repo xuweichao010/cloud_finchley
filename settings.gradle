@@ -6,4 +6,7 @@ include 'SerGateway'
 include 'SerService'
 include 'SerFeign'
 include 'SerZipKin'
+include 'SubModelUser'
+include 'SubSwaager'
+include 'SubEsbatis'
 
