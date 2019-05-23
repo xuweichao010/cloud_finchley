@@ -34,12 +34,9 @@ allprojects {
                 dir.mkdirs()
             }
     }
-
-    dependencies {
-        implementation('com.alibaba:fastjson:1.2.47')
-    }
     task mkdirJava() {
-        def paths = ['src/main/java', 'src/main/resources', 'src/test/java', 'src/test/resource'];
+        //, 'src/test/java', 'src/test/resource'
+        def paths = ['src/main/java', 'src/main/resources'];
         doFirst {
             paths.forEach(createDir)
         }

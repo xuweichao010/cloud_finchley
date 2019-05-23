@@ -12,4 +12,7 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-config-client")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.cloud:spring-cloud-starter-zipkin")
+    implementation("io.springfox:springfox-swagger2:2.7.0")  //快速构建API
+    implementation("io.springfox:springfox-swagger-ui:2.7.0") //快速构建API
+    compile project(":SubEsbatis")
 }

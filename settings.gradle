@@ -9,4 +9,5 @@ include 'SerZipKin'
 include 'SubModelUser'
 include 'SubSwaager'
 include 'SubEsbatis'
+include 'SubCommons'
 
