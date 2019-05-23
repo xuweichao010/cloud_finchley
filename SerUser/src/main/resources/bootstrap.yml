@@ -1,4 +1,7 @@
 spring:
   cloud:
     config:
-      uri: http://127.0.0.1:10021
+      profile:    #激活的配置
+      uri:        #配置中心地址
+      name:       #读取配置的名字
+      label:      #读取配置的分支

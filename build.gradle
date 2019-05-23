@@ -10,7 +10,9 @@ buildscript {
         classpath('org.flywaydb:flyway-gradle-plugin:4.+')
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
+
 }
+
 
 allprojects {
     apply plugin: 'java'
@@ -32,6 +34,7 @@ allprojects {
                 dir.mkdirs()
             }
     }
+
     dependencies {
         implementation('com.alibaba:fastjson:1.2.47')
     }
@@ -41,4 +44,5 @@ allprojects {
             paths.forEach(createDir)
         }
     }
+
 }

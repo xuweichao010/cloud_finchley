@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      profile: prod
+      uri: http://127.0.0.1:10021
+      name: user
+      label: dev
