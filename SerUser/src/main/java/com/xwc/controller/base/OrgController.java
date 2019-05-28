@@ -1,4 +1,4 @@
-package com.xwc.controller;
+package com.xwc.controller.base;
 
 import com.xwc.commons.model.JsonMessage;
 import com.xwc.commons.model.PageResponse;

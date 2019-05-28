@@ -10,4 +10,5 @@ include 'SubModelUser'
 include 'SubSwaager'
 include 'SubEsbatis'
 include 'SubCommons'
+include 'SerAuth'
 

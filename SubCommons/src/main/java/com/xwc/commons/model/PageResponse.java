@@ -1,7 +1,6 @@
 package com.xwc.commons.model;
 
 
-import io.swagger.annotations.ApiModelProperty;
 
 import java.util.List;
 

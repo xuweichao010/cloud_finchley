@@ -1,9 +1,12 @@
-package com.xwc.controller;
+package com.xwc.controller.base;
 
 import com.xwc.commons.model.JsonMessage;
 import com.xwc.commons.model.PageResponse;
+import com.xwc.controller.base.dto.menu.MenuTreeDto;
+import com.xwc.controller.base.dto.org.OrgTreeDto;
 import com.xwc.controller.base.dto.role.RoleDto;
 import com.xwc.controller.base.dto.role.RoleFilterDto;
+import com.xwc.entity.base.Menu;
 import com.xwc.entity.base.Org;
 import com.xwc.entity.base.Role;
 import com.xwc.service.auth.AuthInfoService;

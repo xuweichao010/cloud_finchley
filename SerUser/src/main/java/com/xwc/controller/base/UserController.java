@@ -1,8 +1,10 @@
-package com.xwc.controller;
+package com.xwc.controller.base;
 
 import com.xwc.commons.model.JsonMessage;
 import com.xwc.commons.model.PageResponse;
+import com.xwc.controller.base.dto.menu.MenuDto;
 import com.xwc.controller.base.dto.menu.MenuTreeDto;
+import com.xwc.controller.base.dto.org.OrgTreeDto;
 import com.xwc.controller.base.dto.role.RoleDto;
 import com.xwc.controller.base.dto.user.UserDto;
 import com.xwc.controller.base.dto.user.UserFilterDto;
@@ -14,6 +16,7 @@ import com.xwc.service.base.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
