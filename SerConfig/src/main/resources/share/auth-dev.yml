@@ -2,7 +2,7 @@ server:
   port: 10033
 eureka:
   instance:
-    appname: 用户中心
+    appname: 认证中心
 spring:
   application:
-    name: user
+    name: auth
