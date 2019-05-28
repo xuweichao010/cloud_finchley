@@ -15,16 +15,16 @@ import org.springframework.stereotype.Component;
  * 业务：
  * 功能：
  */
-@Component
-public class AuthClientService implements ClientDetailsService {
-    @Autowired
-    private ClientMapper clientMapper;
-
-    @Override
-    public ClientDetails loadClientByClientId(String clientId) throws ClientRegistrationException {
-        Client client = clientMapper.selectKey(clientId);
-        if (client == null) throw new BusinessException("客户端认证出错", clientId);
-        IClient iClient = new IClient(client.getClientId(), null, client.getScope(), client.getGrantType(), null);
-        return iClient;
-    }
-}
+//@Component
+//public class AuthClientService implements ClientDetailsService {
+//    @Autowired
+//    private ClientMapper clientMapper;
+//
+//    @Override
+//    public ClientDetails loadClientByClientId(String clientId) throws ClientRegistrationException {
+//        Client client = clientMapper.selectKey(clientId);
+//        if (client == null) throw new BusinessException("客户端认证出错", clientId);
+//        IClient iClient = new IClient(client.getClientId(), null, client.getScope(), client.getGrantType(), null);
+//        return iClient;
+//    }
+//}

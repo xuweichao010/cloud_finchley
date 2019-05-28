@@ -16,6 +16,4 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator") //服务检查
     compile("org.springframework.boot:spring-boot-starter-data-redis") //缓存
     compile("org.springframework.cloud:spring-cloud-starter-oauth2")
-    compile("org.springframework.boot:spring-boot-starter-data-redis")
-    implementation("org.springframework.cloud:spring-cloud-config-client")
 }
