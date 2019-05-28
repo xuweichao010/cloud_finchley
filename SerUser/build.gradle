@@ -8,14 +8,14 @@ dependencyManagement {
 }
 dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') //springboot快速启动组件
-    implementation('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
-    implementation("org.springframework.cloud:spring-cloud-config-client")
-    implementation("org.springframework.cloud:spring-cloud-starter-oauth2")
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.cloud:spring-cloud-starter-zipkin")
-
-    implementation("io.springfox:springfox-swagger2:2.7.0")  //快速构建API
-    implementation("io.springfox:springfox-swagger-ui:2.7.0") //快速构建API
+    compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
+    compile("org.springframework.cloud:spring-cloud-config-client")
+    compile("org.springframework.cloud:spring-cloud-starter-oauth2")
+    compile("org.springframework.cloud:spring-cloud-starter-zipkin")
+    compile("org.springframework.cloud:spring-cloud-starter-openfeign")
+    compile("io.springfox:springfox-swagger2:2.7.0")  //快速构建API
+    compile("io.springfox:springfox-swagger-ui:2.7.0") //快速构建API
+    compile("org.springframework.boot:spring-boot-starter-data-redis")
     compile project(":SubEsbatis")
     compile project(":SubCommons")
 }

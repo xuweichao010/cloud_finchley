@@ -1,10 +1,10 @@
 package com.xwc.controller.base.dto.role;
 
 
-import com.xwc.commons.model.PageRequest;
 import com.xwc.esbatis.anno.condition.enhance.Like;
 import com.xwc.esbatis.anno.condition.enhance.NotNull;
 import com.xwc.esbatis.anno.condition.enhance.RightLike;
+import com.xwc.esbatis.meta.Page;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  * 业务：
  * 功能：
  */
-public class RoleFilterDto extends PageRequest {
+public class RoleFilterDto extends Page {
 
     /**
      * 名称

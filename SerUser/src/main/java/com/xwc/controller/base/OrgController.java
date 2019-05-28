@@ -63,14 +63,14 @@ public class OrgController {
         orgService.update(Org.convert(body));
         return JsonMessage.succeed();
     }
-
-    @GetMapping("")
-    @ApiOperation("查询机构列表")
-    public JsonMessage<PageResponse<OrgDto>> findList(OrgFilterDto filter) {
-        List<OrgDto> list = orgService.list(filter).stream().map(OrgDto::convert).collect(Collectors.toList());
-        Long count = orgService.count(filter);
-        return JsonMessage.succeed(PageResponse.init(list, count, filter.getOffset()));
-    }
+//
+//    @GetMapping("")
+//    @ApiOperation("查询机构列表")
+//    public JsonMessage<PageResponse<OrgDto>> findList(OrgFilterDto filter) {
+//        List<OrgDto> list = orgService.list(filter).stream().map(OrgDto::convert).collect(Collectors.toList());
+//        Long count = orgService.count(filter);
+//        return JsonMessage.succeed(PageResponse.init(list, count, filter.getOffset()));
+//    }
 
     private OrgTreeDto convertTree(OrgTreeDto root, List<OrgTreeDto> childs) {
         root.setList(childs.stream().filter(item -> root.getCode().equals(item.getParentCode())).collect(Collectors.toList()));

@@ -1,11 +1,8 @@
 package com.xwc.entity.base;
 
-import com.xwc.controller.base.dto.user.UserDto;
 import com.xwc.esbatis.anno.enums.KeyEnum;
 import com.xwc.esbatis.anno.table.PrimaryKey;
 import com.xwc.esbatis.anno.table.Table;
-import org.springframework.beans.BeanUtils;
-import org.springframework.data.annotation.Id;
 
 import java.io.Serializable;
 

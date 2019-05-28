@@ -2,8 +2,6 @@ package com.xwc.controller.auth;
 
 import com.xwc.commons.expception.SystemException;
 import com.xwc.commons.model.JsonMessage;
-import com.xwc.commons.utils.CodingUtils;
-import com.xwc.commons.utils.StringUtils;
 import com.xwc.controller.auth.dto.ClientLoginDto;
 import com.xwc.controller.auth.dto.UserLoginDto;
 import com.xwc.service.CacheService;
@@ -21,6 +19,7 @@ import org.springframework.security.oauth2.provider.authentication.OAuth2Authent
 import org.springframework.security.oauth2.provider.endpoint.TokenEndpoint;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.util.Base64Utils;
+import org.springframework.util.StringUtils;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.*;
 
@@ -106,7 +105,7 @@ public class AuthController {
     @ApiOperation("带秘钥用户认证(推荐使用)")
     public JsonMessage<OAuth2AccessToken> userSecretLogin(@RequestBody UserLoginDto login) throws HttpRequestMethodNotSupportedException {
         String secret = cacheService.getValue(CacheService.AUT_HOME_SERCRT + login.getUsername());
-        if (StringUtils.isBlank(secret)) return JsonMessage.failed("秘钥失效");
+        if (StringUtils.isEmpty(secret)) return JsonMessage.failed("秘钥失效");
         try {
             String password = passwordDecode(login.getPassword(), secret);
             login.setPassword(password);

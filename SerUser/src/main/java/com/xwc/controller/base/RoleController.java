@@ -44,17 +44,17 @@ public class RoleController {
         return JsonMessage.succeed();
     }
 
-    @GetMapping()
-    @ApiOperation("查询角色信息")
-    public JsonMessage<PageResponse<RoleDto>> addUser(@Validated RoleFilterDto filter) {
-        Org org = authInfoService.org();
-        if(filter.getOrgCode() ==  null || !filter.getOrgCode().startsWith(org.getCode())){
-            filter.setOrgCode(org.getCode());
-        }
-        List<RoleDto> list = roleService.list(filter).stream().map(RoleDto::convert).collect(Collectors.toList());
-        Long count = roleService.count(filter);
-        return JsonMessage.succeed(PageResponse.init(list, count, filter.getOffset()));
-    }
+//    @GetMapping()
+//    @ApiOperation("查询角色信息")
+//    public JsonMessage<PageResponse<RoleDto>> addUser(@Validated RoleFilterDto filter) {
+//        Org org = authInfoService.org();
+//        if(filter.getOrgCode() ==  null || !filter.getOrgCode().startsWith(org.getCode())){
+//            filter.setOrgCode(org.getCode());
+//        }
+//        List<RoleDto> list = roleService.list(filter).stream().map(RoleDto::convert).collect(Collectors.toList());
+//        Long count = roleService.count(filter);
+//        return JsonMessage.succeed(PageResponse.init(list, count, filter.getOffset()));
+//    }
 
     @PutMapping()
     @ApiOperation("修改角色")

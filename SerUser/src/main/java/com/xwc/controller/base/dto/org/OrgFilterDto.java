@@ -1,10 +1,10 @@
 package com.xwc.controller.base.dto.org;
 
-import com.xwc.commons.model.PageRequest;
 import com.xwc.entity.base.Org;
 import com.xwc.esbatis.anno.condition.enhance.Like;
 import com.xwc.esbatis.anno.condition.enhance.NotNull;
 import com.xwc.esbatis.anno.condition.enhance.RightLike;
+import com.xwc.esbatis.meta.Page;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.beans.BeanUtils;
 
@@ -14,7 +14,7 @@ import org.springframework.beans.BeanUtils;
  * 业务：
  * 功能：
  */
-public class OrgFilterDto extends PageRequest{
+public class OrgFilterDto extends Page{
 
 
     @ApiModelProperty("机构名称")

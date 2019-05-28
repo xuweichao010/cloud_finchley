@@ -69,13 +69,13 @@ public class UserController {
         return JsonMessage.succeed();
     }
 
-    @PutMapping("")
-    @ApiOperation("修改用户")
-    public JsonMessage<PageResponse<UserDto>> list(UserFilterDto filter) {
-        List<UserDto> list = userService.list(filter).stream().map(UserDto::convert).collect(Collectors.toList());
-        Long count = userService.count(filter);
-        return JsonMessage.succeed(PageResponse.init(list, count, filter.getOffset()));
-    }
+//    @PutMapping("")
+//    @ApiOperation("修改用户")
+//    public JsonMessage<PageResponse<UserDto>> list(UserFilterDto filter) {
+//        List<UserDto> list = userService.list(filter).stream().map(UserDto::convert).collect(Collectors.toList());
+//        Long count = userService.count(filter);
+//        return JsonMessage.succeed(PageResponse.init(list, count, filter.()));
+//    }
 
     @PutMapping("/{userId}/role")
     @ApiOperation("分配角色")
