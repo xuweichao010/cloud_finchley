@@ -10,21 +10,18 @@ buildscript {
         classpath('org.flywaydb:flyway-gradle-plugin:4.+')
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
-
 }
-
-
 allprojects {
     apply plugin: 'java'
     group 'com.xwc.cloud'
     version '1.0'
     sourceCompatibility = 1.8
     repositories {
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
         mavenCentral()
     }
     ext {
-        set('springCloudVersion', 'Finchley.RELEASE')
+        set('springCloudVersion', 'Finchley.SR3')
     }
     //创建目录
     def createDir = {
