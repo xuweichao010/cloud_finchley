@@ -7,5 +7,10 @@ eureka:
 spring:
   zipkin:
     base-url: http://127.0.0.1:9411
-
+#缓存配置
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
 
