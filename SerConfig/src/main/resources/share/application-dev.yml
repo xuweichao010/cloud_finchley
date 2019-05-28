@@ -4,11 +4,9 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:10011/eureka/
 spring:
-  zipkin:
+  zipkin: #配置服务链路追踪
     base-url: http://127.0.0.1:9411
-#缓存配置
-spring:
-  redis:
+  redis: #缓存配置
     database: 0
     host: 127.0.0.1
     port: 6379
