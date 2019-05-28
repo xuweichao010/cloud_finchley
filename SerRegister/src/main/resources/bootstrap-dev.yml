@@ -1,7 +1,17 @@
 spring:
-  cloud:
-    config:
-      profile: dev
-      uri: http://127.0.0.1:10021
-      name: register
-      label: dev
+  application:
+    name: register
+server:
+  port: 10011
+eureka:
+  instance:
+    hostname: localhost
+    appname: 注册中心
+  client:
+    register-with-eureka: false   #关闭服务发现
+    fetch-registry: false   # 关闭服务注册
+#  server:
+#      waitTimeInMsWhenSyncEmpty: 0
+#      # 如何解决Eureka Server不踢出已关停的节点的问题
+#      enable-self-preservation: false  # 关闭自我保护
+#      eviction-interval-timer-in-ms: 10000    #清理间隔（单位毫秒，默认是60*1000）
