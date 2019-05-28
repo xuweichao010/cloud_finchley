@@ -1,0 +1,6 @@
+eureka:
+  instance:
+    appname:
+spring:
+  application:
+    name:
