@@ -1,7 +1,14 @@
 spring:
   cloud:
     config:
-      profile: prod
-      uri: http://127.0.0.1:10021
+      fail-fast: true
+      discovery:
+        enabled: true
+        serviceId: config-service
       name: user
+      profile: prod
       label: dev
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:10011/eureka

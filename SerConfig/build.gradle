@@ -4,7 +4,7 @@ apply plugin: 'java'
 dependencies {
 
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-server")  //注册中心组件
-    testImplementation("org.springframework.boot:spring-boot-starter-test") //boot核心组件建
+    testImplementation("org.springframework.boot:spring-boot-starter-test") //快速启动组件
     implementation("org.springframework.cloud:spring-cloud-starter-zipkin") //服务监控组件
     implementation("org.springframework.boot:spring-boot-starter-actuator") //服务健康检查组件
     implementation("org.springframework.cloud:spring-cloud-config-server")  //配置服务组件
