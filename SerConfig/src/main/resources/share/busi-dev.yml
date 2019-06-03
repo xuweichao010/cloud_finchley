@@ -5,7 +5,7 @@ eureka:
     appname: 用户中心
 spring:
   application:
-    name: user
+    name: busi
 security:
   oauth2:
     resource:
