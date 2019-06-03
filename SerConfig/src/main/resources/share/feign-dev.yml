@@ -1,9 +1,0 @@
-server:
-  port: 1020
-eureka:
-  instance:
-    appname: 消费中心
-spring:
-  application:
-    name: fegin-service
-

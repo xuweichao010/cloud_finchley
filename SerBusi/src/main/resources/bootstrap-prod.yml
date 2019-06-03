@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        enabled: true
+        serviceId: config-service
+      name: busi
+      profile: prod
+      label: dev
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:10011/eureka

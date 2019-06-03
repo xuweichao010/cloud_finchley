@@ -1,0 +1,16 @@
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'java'
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+dependencies {
+    testImplementation('org.springframework.boot:spring-boot-starter-test')                     //快速启动组件
+    implementation('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')      //注册中心组件
+    implementation("org.springframework.boot:spring-boot-starter-web")                          //Web组件
+    implementation("org.springframework.cloud:spring-cloud-starter-openfeign")                  //服务调用组件
+    implementation("org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard")  //服务监控组件
+    implementation("org.springframework.cloud:spring-cloud-starter-oauth2")                     //安全组件
+}
