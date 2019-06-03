@@ -20,17 +20,17 @@ public class JsonMessage<T> {
     /**
      * 访问受限（无权限）
      */
-    private final static int NOT_PRIVILEGE = 40;
+    public static final int FORBIDDEN = 403;
 
     /**
      * 未认证
      */
-    public final static int NOT_AUTHEN = 41;
+    public final static int NOT_AUTHEN = 401;
 
     /**
      * 代码异常
      */
-    private final static int ERROR = 50;
+    private final static int ERROR = 500;
 
 
     private String msg;
@@ -77,10 +77,25 @@ public class JsonMessage<T> {
         json.setDescription(description);
         return json;
     }
+
     public static <Void> JsonMessage<Void> failed(String msg, Integer code, String description) {
         JsonMessage<Void> json = new JsonMessage<>();
         json.setCode(code).setMsg(msg);
         json.setDescription(description);
+        return json;
+    }
+
+
+    public static <Void> JsonMessage<Void> unauthorized() {
+        JsonMessage<Void> json = new JsonMessage<>();
+        json.setCode(NOT_AUTHEN).setMsg("未认证");
+        return json;
+    }
+
+
+    public static <Void> JsonMessage<Void> forbidden() {
+        JsonMessage<Void> json = new JsonMessage<>();
+        json.setCode(FORBIDDEN).setMsg("无权访问");
         return json;
     }
 

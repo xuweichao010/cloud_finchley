@@ -20,7 +20,8 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
+        //配置资源权限
         http.authorizeRequests()
-                .antMatchers("/order/**").authenticated(); // 配置order访问控制，必须认证后才可以访问
+                .antMatchers("/auth/**").permitAll().anyRequest().authenticated(); // 配置order访问控制，必须认证后才可以访问
     }
 }

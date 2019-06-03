@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        set('springBootVersion','2.0.3.RELEASE')
+        set('springBootVersion','2.0.9.RELEASE')
     }
     repositories {
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
@@ -9,15 +9,16 @@ buildscript {
     }
     dependencies {
         classpath('org.flywaydb:flyway-gradle-plugin:4.+')
-        classpath "gradle.plugin.ua.eshepelyuk:ManifestClasspath:1.0.0"
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
 allprojects {
     apply plugin: 'java'
+    apply plugin: 'idea'
     group 'com.xwc.cloud'
     version '1.0'
     sourceCompatibility = 1.8
+    buildDir = "${rootDir}/build/${name}"
     repositories {
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
         mavenCentral()
@@ -35,7 +36,7 @@ allprojects {
     }
     task mkdirJava() {
         //, 'src/test/java', 'src/test/resource'
-        def paths = ['src/main/java', 'src/main/resources'];
+        def paths = ['src/main/java', 'src/main/resources']
         doFirst {
             paths.forEach(createDir)
         }

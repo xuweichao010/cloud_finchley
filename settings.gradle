@@ -1,14 +1,11 @@
 rootProject.name = 'CloudFinchley'
-include 'SerRegister'
-include 'SerUser'
-include 'SerConfig'
-include 'SerGateway'
-include 'SerService'
-include 'SerFeign'
-include 'SerZipKin'
-include 'SubModelUser'
-include 'SubSwaager'
-include 'SubEsbatis'
-include 'SubCommons'
+include 'SerRegister'   //注册中心
+include 'SerGateway'    //网关
+include 'SerConfig'     //配置中心
+include 'SerUser'       //用户服务
 include 'SerAuth'
+include 'SerFeign'      //消费者中心
+include 'SerZipKin'     //监控中心
+include 'SubEsbatis'    //数据库服务
+include 'SubCommons'    //公共服务
 
